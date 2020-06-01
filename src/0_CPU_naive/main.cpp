@@ -18,7 +18,7 @@ using namespace std;
 int test_CNN_predict()
 {
 	CNN cnn2;
-	bool flag = cnn2.readModelFile("models/cnn.model");
+	bool flag = cnn2.readModelFile("models/0_CPU_naive.model");
 	if (!flag) {
 		std::cout << "read cnn model error" << std::endl;
 		return -1;

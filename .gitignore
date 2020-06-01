@@ -1,0 +1,10 @@
+/*
+!/data
+!/images
+!/src
+!.gitignore
+!/Makefile
+!/Include.mk
+!/models
+*.o
+*.d
