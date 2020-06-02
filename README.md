@@ -32,7 +32,7 @@ make clean
 └── src
     ├── 0_CPU_naive	# 多个不同的训练程序
     │   ├── ....
-    │   └── Makefile # 每个训练程序有单独Makefile
+    │   └── Makefile	# 每个训练程序有单独Makefile
     │     
     ├── 1_CPU_loop_opt
     │   ├── ....
