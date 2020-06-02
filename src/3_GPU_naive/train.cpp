@@ -29,9 +29,16 @@ bool CNN::train()
 			data_single_image = data_input_train + i * num_neuron_input_CNN;
 			data_single_label = data_output_train + i * num_neuron_output_CNN;
 
-			memcpy(neuron_input, data_single_image, num_neuron_input_CNN*sizeof(float));
+			// memcpy(neuron_input, data_single_image, num_neuron_input_CNN*sizeof(float));
 
-			Forward_C1();
+			// Forward_C1();
+			// Forward_S2();
+			// Forward_C3();
+			// Forward_S4();
+			// Forward_C5();
+			// Forward_output();
+
+			Forward_C1(i * num_neuron_input_CNN,cl_data_input_train);
 			Forward_S2();
 			Forward_C3();
 			Forward_S4();
@@ -133,9 +140,9 @@ float CNN::test()
 		data_single_image = data_input_test + num * num_neuron_input_CNN;
 		data_single_label = data_output_test + num * num_neuron_output_CNN;
 
-		memcpy(neuron_input, data_single_image, num_neuron_input_CNN*sizeof(float));
+		// memcpy(neuron_input, data_single_image, num_neuron_input_CNN*sizeof(float));
 
-		Forward_C1();
+		Forward_C1(num * num_neuron_input_CNN, cl_data_input_test);
 		Forward_S2();
 		Forward_C3();
 		Forward_S4();
@@ -146,6 +153,8 @@ float CNN::test()
 		int pos_y = -2;
 		float max_value_t = -9999.0;
 		float max_value_y = -9999.0;
+
+		clEnqueueReadBuffer(command_queue, Forward_out_mem, CL_TRUE, 0, num_neuron_output_CNN*sizeof(cl_float), neuron_output, 0, NULL, NULL);
 
 		for (int i = 0; i < num_neuron_output_CNN; i++) {
 			if (neuron_output[i] > max_value_y) {

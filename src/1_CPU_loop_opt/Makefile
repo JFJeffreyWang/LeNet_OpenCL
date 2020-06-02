@@ -1,6 +1,6 @@
 include ../../Include.mk
 
-MODEL = 0_CPU_naive
+MODEL = 1_CPU_loop_opt
 FLAGS = $(OPENCV) $(OPENCL)
 SRC_FILES := $(wildcard *.cpp)
 SRC_FILES := $(filter-out main.cpp,$(SRC_FILES))

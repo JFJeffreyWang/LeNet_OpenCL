@@ -1,4 +1,4 @@
-MODELS = 0_CPU_naive
+MODELS = 0_CPU_naive 1_CPU_loop_opt 2_CPU_SIMD 3_GPU_naive
 PROJECTS = $(shell find $(addprefix src/,$(MODELS)) -name Makefile)
 
 %.build :
