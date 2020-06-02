@@ -32,7 +32,7 @@ make clean
 └── src
     ├── 0_CPU_naive	# 多个不同的训练程序
     │   ├── ....
-    │   └── Makefile# 每个训练程序有单独Makefile
+    │   └── Makefile # 每个训练程序有单独Makefile
     │     
     ├── 1_CPU_loop_opt
     │   ├── ....
@@ -51,9 +51,9 @@ RAM: 	16GB
 
 GPU:	GTX1070    8GB RAM    1920 CUDA Core
 
-系统:    Ubuntu 18.04.4
+系统:   Ubuntu 18.04.4
 
-编译器:  gcc 7.5.0 编译使用 `-O0` 关闭优化
+编译器: gcc 7.5.0 编译使用 `-O0` 关闭优化
 
 ## 结果展示
 
