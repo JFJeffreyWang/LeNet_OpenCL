@@ -6,6 +6,6 @@
 !/Makefile
 !/Include.mk
 !/models
-!/README.assets
+!/README*
 *.o
 *.d
